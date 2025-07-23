@@ -28,6 +28,10 @@ app.use(cors());
 
 import authRoutes from './routes/authRoutes.js'
 app.use('/api/auth',authRoutes);
+
+import productRoutes from './routes/productRoutes.js'
+app.use('/api/products',productRoutes)
+
 app.listen(PORT,(req,res)=>{
     console.log(`app is listening on port ${PORT}`)
 })

@@ -25,8 +25,8 @@ export const userRegister=async (req, res) => {
 
         const result = await pool.query(
             `INSERT INTO users(username,email,password)
-        VALUES($1,$2,$3)
-        RETURNING id,username,email,role`,
+             VALUES($1,$2,$3)
+             RETURNING id,username,email,role`,
             [username, email, hashPassword]
         );
         res.status(200).json({
