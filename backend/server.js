@@ -26,11 +26,15 @@ import pool from './config/db.js'
 app.use(cors());
 //----------------------------Api--------------------------------------
 
+
 import authRoutes from './routes/authRoutes.js'
 app.use('/api/auth',authRoutes);
 
 import productRoutes from './routes/productRoutes.js'
 app.use('/api/products',productRoutes)
+
+import supplierRoutes from './routes/suppliersRoutes.js'
+app.use('/api/suppliers',supplierRoutes)
 
 app.listen(PORT,(req,res)=>{
     console.log(`app is listening on port ${PORT}`)
